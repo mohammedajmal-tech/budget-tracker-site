@@ -494,8 +494,8 @@ th {
 .device-frame .screen {
   position: relative;
   overflow: hidden;
-  border-radius: 34px;
-  background: #fff;
+  border-radius: 30px;
+  background: #16211b;
 }
 .device-frame .screen img {
   display: block;
