@@ -33,6 +33,8 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -41,7 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; }
+img { max-width: 100%; height: auto; display: block; }
 
 .wrap {
   max-width: 720px;
@@ -391,9 +393,15 @@ th {
   border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
 }
 .apple-nav .brand { margin: 0; }
-.apple-nav .brand-name { font-size: 1rem; }
+.apple-nav .brand-name { font-size: 1rem; white-space: nowrap; }
 .apple-nav .topnav-links { display: flex; gap: 26px; }
-.apple-nav .topnav-links a { font-size: 0.88rem; }
+.apple-nav .topnav-links a { font-size: 0.88rem; white-space: nowrap; }
+
+@media (max-width: 480px) {
+  .apple-nav { padding: 14px 18px; }
+  .apple-nav .topnav-links { gap: 14px; }
+  .apple-nav .topnav-links a { font-size: 0.82rem; }
+}
 
 .hero-apple {
   text-align: center;
@@ -526,7 +534,11 @@ th {
   align-items: center;
   justify-content: center;
   margin: 0 auto 18px;
-  font-size: 1.3rem;
+}
+.chip .chip-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
 }
 .chip h4 { font-size: 1.05rem; font-weight: 650; margin: 0 0 8px; }
 .chip p { color: var(--muted); font-size: 0.92rem; margin: 0; line-height: 1.55; }
