@@ -1,6 +1,6 @@
 # Budget Tracker
 
-> Budget Tracker is a free, offline budgeting app built for expats in the UAE and GCC. It handles multi-currency accounts, a built-in Zakat calculator, and dedicated remittance tracking, storing everything in an encrypted local database with no bank linking, no ads, and no subscription. Made by Bramora Labs, an independent one-person studio in the UAE.
+> Budget Tracker is a free, offline budgeting app built for GCC expats. It handles multi-currency accounts, a built-in Zakat calculator, and dedicated remittance tracking, storing everything in an encrypted local database with no bank linking, no ads, and no subscription. Made by Bramora Labs, an independent one-person studio based in the UAE.
 
 Key facts:
 - Platform: Android (Google Play), via Expo/React Native
@@ -18,7 +18,7 @@ Key facts:
 - [About](https://mohammedajmal-tech.github.io/budget-tracker-site/about.html): who makes the app and why
 - [Guides](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/index.html): index of all guides
 - [How to Calculate Zakat on Savings and Salary](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/how-to-calculate-zakat-on-savings.html): full Zakat calculation method with a worked AED example
-- [Best Budgeting Apps for UAE Expats in 2026](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/best-budgeting-apps-uae-expats.html): comparison of budgeting apps against expat-specific criteria
+- [Best Budgeting Apps for GCC Expats in 2026](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/best-budgeting-apps-gcc-expats.html): comparison of budgeting apps against expat-specific criteria
 - [How to Track Money You Send Home](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/multi-currency-remittance-tracking-guide.html): remittance tracking method
 - [AED Budgeting 101](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/aed-budgeting-101-gcc-expats.html): starting budget split for GCC expats
 - [Privacy Policy](https://mohammedajmal-tech.github.io/budget-tracker-legal/privacy.html)
