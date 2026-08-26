@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="../index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -40,9 +40,9 @@
 
   <a class="back-link" href="index.html">&larr; All guides</a>
 
-  <p class="eyebrow">Comparison</p>
-  <h1>Best Budgeting Apps for UAE Expats in 2026</h1>
-  <div class="article-meta">
+  <p class="eyebrow reveal">Comparison</p>
+  <h1 class="reveal">Best Budgeting Apps for UAE Expats in 2026</h1>
+  <div class="article-meta reveal">
     <span>Bramora Labs</span>
     <span>&middot;</span>
     <span>Updated August 26, 2026</span>
@@ -50,7 +50,7 @@
     <span>7 min read</span>
   </div>
 
-  <div class="tldr">
+  <div class="tldr reveal">
     <div class="tldr-label">Short answer</div>
     <p>
       The right budgeting app for a UAE or GCC expat isn't necessarily the most popular one globally — it's the one
@@ -60,12 +60,12 @@
     </p>
   </div>
 
-  <p><em>Disclosure: Budget Tracker, made by us, is one of the apps compared below. Everything stated about it is
+  <p class="reveal"><em>Disclosure: Budget Tracker, made by us, is one of the apps compared below. Everything stated about it is
   accurate to how it currently works; everything stated about other apps reflects their publicly listed features at
   time of writing and can change — check the app's own listing before deciding.</em></p>
 
-  <h2>What actually matters for expat money, specifically</h2>
-  <ul>
+  <h2 class="reveal">What actually matters for expat money, specifically</h2>
+  <ul class="reveal">
     <li><strong>True multi-currency, not just currency conversion.</strong> You want to log an expense in the currency you paid it in — AED for rent, INR/PHP/GBP/etc. for money sent home — without everything being force-converted into one base currency and losing the original number.</li>
     <li><strong>Bank linking is optional, not required.</strong> Many popular apps are built around Plaid-style bank connections that work well in the US/UK but are patchy or unsupported for GCC banks — and some expats simply don't want to hand over banking credentials to a third party.</li>
     <li><strong>A remittance category that isn't "miscellaneous."</strong> For a lot of expats, money sent home is the single biggest line item after rent. An app that buries it in a generic "transfer" category makes your budget lie to you.</li>
@@ -73,8 +73,8 @@
     <li><strong>Pricing model.</strong> One-time purchase vs. monthly subscription vs. ad-supported free — worth checking before you commit your transaction history to an app.</li>
   </ul>
 
-  <h2>How the options compare</h2>
-  <table>
+  <h2 class="reveal">How the options compare</h2>
+  <table class="reveal">
     <thead>
       <tr><th>App</th><th>Multi-currency</th><th>Bank linking</th><th>Zakat calculator</th><th>Pricing</th></tr>
     </thead>
@@ -91,16 +91,16 @@
     August 2026, and can change — check each app's current listing before deciding.
   </p>
 
-  <h2>If privacy is the deciding factor</h2>
-  <p>
+  <h2 class="reveal">If privacy is the deciding factor</h2>
+  <p class="reveal">
     Bank-linking apps are genuinely convenient — transactions appear automatically instead of being entered by hand.
     That convenience comes from granting a third party read access to your bank accounts. If that trade-off doesn't
     sit right with you, or your GCC bank simply isn't supported by these integrations, a manual-entry, offline app
     like Budget Tracker is the more direct alternative: nothing to connect, nothing to revoke later.
   </p>
 
-  <h2>Bottom line</h2>
-  <p>
+  <h2 class="reveal">Bottom line</h2>
+  <p class="reveal">
     If you're managing money across two currencies, sending remittances home, or need Zakat handled without a
     separate app, look specifically for those three things rather than picking whichever app has the most reviews.
     Most general budgeting apps were built for a single-currency, single-country user and treat everything else as
@@ -118,5 +118,23 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -24,32 +24,32 @@
 
 <div class="wrap">
 
-  <p class="eyebrow">About</p>
-  <h1>Built by one person, for a problem he had himself</h1>
-  <p class="meta">Bramora Labs — UAE</p>
+  <p class="eyebrow reveal">About</p>
+  <h1 class="reveal">Built by one person, for a problem he had himself</h1>
+  <p class="meta reveal">Bramora Labs — UAE</p>
 
-  <p>
+  <p class="reveal">
     Budget Tracker is made by Bramora Labs, an independent, one-person software studio based in the UAE. There's no
     investor deck behind it and no growth team — just one developer who moved to the UAE, tried the popular budgeting
     apps, and found that none of them were built with expat life in mind.
   </p>
-  <p>
+  <p class="reveal">
     The gaps were specific: apps that assumed one currency, not a salary in AED and a family back home in a different
     one. Apps with no way to calculate Zakat without switching to a separate tool. Apps that wanted bank credentials
     linked in before they'd show you anything. Budget Tracker exists to close those gaps, without asking for data it
     doesn't need.
   </p>
 
-  <h2>What that means in practice</h2>
-  <ul>
+  <h2 class="reveal">What that means in practice</h2>
+  <ul class="reveal">
     <li><strong>No bank linking.</strong> The app never asks for banking credentials or connects to any financial institution.</li>
     <li><strong>No ads, no ad SDK.</strong> Nothing in the codebase tracks you for advertising, because there's no advertising.</li>
     <li><strong>Encrypted, on-device storage.</strong> Your data lives in a SQLCipher-encrypted local database. It doesn't touch a server unless you explicitly export or back it up yourself.</li>
     <li><strong>One-time payment, not a subscription.</strong> The optional Pro unlock (export and PDF reports) is a single Google Play purchase, not a recurring charge.</li>
   </ul>
 
-  <h2>Get in touch</h2>
-  <p>
+  <h2 class="reveal">Get in touch</h2>
+  <p class="reveal">
     Questions, bug reports, or feature requests — all of it reaches the same inbox, read by the person who actually
     builds the app: <a href="mailto:bramoralabsupport@gmail.com">bramoralabsupport@gmail.com</a>.
   </p>
@@ -65,5 +65,23 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

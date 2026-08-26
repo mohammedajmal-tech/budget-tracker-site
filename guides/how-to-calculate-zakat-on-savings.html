@@ -53,7 +53,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="../index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -69,9 +69,9 @@
 
   <a class="back-link" href="index.html">&larr; All guides</a>
 
-  <p class="eyebrow">Zakat</p>
-  <h1>How to Calculate Zakat on Savings and Salary</h1>
-  <div class="article-meta">
+  <p class="eyebrow reveal">Zakat</p>
+  <h1 class="reveal">How to Calculate Zakat on Savings and Salary</h1>
+  <div class="article-meta reveal">
     <span>Bramora Labs</span>
     <span>&middot;</span>
     <span>Updated August 26, 2026</span>
@@ -79,7 +79,7 @@
     <span>6 min read</span>
   </div>
 
-  <div class="tldr">
+  <div class="tldr reveal">
     <div class="tldr-label">Short answer</div>
     <p>
       Zakat is 2.5% of your net zakatable wealth — cash, gold, silver, investments, and money owed to you, minus
@@ -89,14 +89,14 @@
     </p>
   </div>
 
-  <div class="callout">
+  <div class="callout reveal">
     <p>
       This is a practical, non-religious guide to the calculation. It is not a fatwa. Zakat rulings differ between
       scholars and schools of thought — for your exact obligation, confirm with a qualified scholar.
     </p>
   </div>
 
-  <h2>The four things you need</h2>
+  <h2 class="reveal">The four things you need</h2>
   <ol>
     <li><strong>Your zakatable wealth</strong> — see the list below.</li>
     <li><strong>Your debts</strong> — amounts you owe that are deductible.</li>
@@ -104,8 +104,8 @@
     <li><strong>Whether a lunar year has passed</strong> — Zakat is due on wealth held for roughly a Hijri year, not a snapshot of today's balance alone.</li>
   </ol>
 
-  <h2>What counts as zakatable wealth</h2>
-  <table>
+  <h2 class="reveal">What counts as zakatable wealth</h2>
+  <table class="reveal">
     <thead><tr><th>Include</th><th>Exclude</th></tr></thead>
     <tbody>
       <tr><td>Cash on hand and in bank accounts</td><td>Your home (primary residence)</td></tr>
@@ -121,11 +121,11 @@
     <strong>net zakatable wealth</strong>.
   </p>
 
-  <h2>The nisab threshold</h2>
-  <p>
+  <h2 class="reveal">The nisab threshold</h2>
+  <p class="reveal">
     You only owe Zakat if your net zakatable wealth is at or above nisab. Two standards are commonly used:
   </p>
-  <table>
+  <table class="reveal">
     <thead><tr><th>Standard</th><th>Weight</th><th>Notes</th></tr></thead>
     <tbody>
       <tr><td>Gold</td><td>~85g (some scholars: up to 87.48g)</td><td>Higher value, fewer people meet it</td></tr>
@@ -137,7 +137,7 @@
     zakatable wealth is at or above it, Zakat is due.
   </p>
 
-  <h2>Worked example</h2>
+  <h2 class="reveal">Worked example</h2>
   <p>Say someone in the UAE has:</p>
   <ul>
     <li>AED 45,000 in savings</li>
@@ -156,25 +156,25 @@
     50,000 × 2.5% = <strong>AED 1,250</strong>.
   </p>
 
-  <h2>Frequently asked</h2>
-  <div class="faq-item">
+  <h2 class="reveal">Frequently asked</h2>
+  <div class="faq-item reveal">
     <p class="q">What percentage is Zakat on savings?</p>
     <p class="a">2.5% (one fortieth) of net zakatable wealth, once it's at or above nisab and held for a lunar year.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item reveal" style="transition-delay: 0.06s">
     <p class="q">What is nisab?</p>
     <p class="a">The minimum wealth threshold before Zakat applies — commonly the value of ~85g of gold or ~595g of silver at current prices (figures vary slightly by scholar).</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item reveal" style="transition-delay: 0.12s">
     <p class="q">Gold or silver nisab — which should I use?</p>
     <p class="a">Both are valid; it's a choice between you and your scholar. The silver nisab is lower, so many scholars recommend it — more people end up qualifying to give.</p>
   </div>
-  <div class="faq-item">
+  <div class="faq-item reveal" style="transition-delay: 0.18s">
     <p class="q">Do I pay Zakat directly on my salary?</p>
     <p class="a">No — Zakat applies to wealth you hold and retain above nisab for a lunar year, not to income the moment it's earned.</p>
   </div>
 
-  <div class="callout accent">
+  <div class="callout accent reveal">
     <p>
       <strong>Doing this by hand every year is tedious.</strong> Budget Tracker has this exact calculation built in —
       enter your cash, gold, silver, investments and debts, pick a nisab standard, and it shows what's due. It's free,
@@ -193,5 +193,23 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

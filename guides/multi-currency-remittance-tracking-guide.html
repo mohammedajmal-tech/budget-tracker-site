@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="../index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -40,9 +40,9 @@
 
   <a class="back-link" href="index.html">&larr; All guides</a>
 
-  <p class="eyebrow">Remittances</p>
-  <h1>How to Track Money You Send Home Without Losing It in "Miscellaneous"</h1>
-  <div class="article-meta">
+  <p class="eyebrow reveal">Remittances</p>
+  <h1 class="reveal">How to Track Money You Send Home Without Losing It in "Miscellaneous"</h1>
+  <div class="article-meta reveal">
     <span>Bramora Labs</span>
     <span>&middot;</span>
     <span>Updated August 26, 2026</span>
@@ -50,7 +50,7 @@
     <span>5 min read</span>
   </div>
 
-  <div class="tldr">
+  <div class="tldr reveal">
     <div class="tldr-label">Short answer</div>
     <p>
       Give remittances their own dedicated category — not "Transfers," not "Other" — and log each transfer in both
@@ -59,8 +59,8 @@
     </p>
   </div>
 
-  <h2>Why this gets lost in most budgets</h2>
-  <p>
+  <h2 class="reveal">Why this gets lost in most budgets</h2>
+  <p class="reveal">
     Most budgeting apps ship with generic categories — Food, Transport, Shopping, Bills — designed for someone
     spending entirely in one country. Money sent abroad doesn't fit cleanly into any of them, so it either gets
     dumped into "Other," recorded as a bank transfer with no category at all, or skipped entirely because it
@@ -68,8 +68,8 @@
     expense after rent — and it's the one most likely to be invisible in their own budget.
   </p>
 
-  <h2>A simple system</h2>
-  <ol>
+  <h2 class="reveal">A simple system</h2>
+  <ol class="reveal">
     <li>
       <strong>Create a dedicated "Remittance" category.</strong> Don't fold it into "Transfers" or "Family" — a
       category of its own means it shows up as its own slice when you look at where your month went.
@@ -91,15 +91,15 @@
     </li>
   </ol>
 
-  <h2>Why the currency you send in matters</h2>
-  <p>
+  <h2 class="reveal">Why the currency you send in matters</h2>
+  <p class="reveal">
     If your app forces every transaction into a single base currency, a remittance sent in AED gets silently
     converted using whatever exchange rate the app applies that day — which may not match the rate your remittance
     provider actually gave you. Over a year, that drift can make your "amount sent" numbers meaningfully wrong.
     Recording the transaction in the currency you actually paid in avoids that entirely.
   </p>
 
-  <div class="callout accent">
+  <div class="callout accent reveal">
     <p>
       Budget Tracker has a dedicated Remittance category and a dedicated log for money sent home, alongside full
       multi-currency accounts — so this doesn't require a workaround. It's free, offline, and nothing you enter
@@ -118,5 +118,23 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

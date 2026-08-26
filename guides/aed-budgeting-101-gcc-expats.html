@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="../index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -40,9 +40,9 @@
 
   <a class="back-link" href="index.html">&larr; All guides</a>
 
-  <p class="eyebrow">Budgeting basics</p>
-  <h1>AED Budgeting 101: A Simple System for GCC Expats</h1>
-  <div class="article-meta">
+  <p class="eyebrow reveal">Budgeting basics</p>
+  <h1 class="reveal">AED Budgeting 101: A Simple System for GCC Expats</h1>
+  <div class="article-meta reveal">
     <span>Bramora Labs</span>
     <span>&middot;</span>
     <span>Updated August 26, 2026</span>
@@ -50,7 +50,7 @@
     <span>6 min read</span>
   </div>
 
-  <div class="tldr">
+  <div class="tldr reveal">
     <div class="tldr-label">Short answer</div>
     <p>
       Start from your net salary in AED, set aside rent and fixed bills first (they're usually the largest and most
@@ -60,17 +60,17 @@
     </p>
   </div>
 
-  <h2>Start with what's different about GCC budgeting</h2>
-  <ul>
+  <h2 class="reveal">Start with what's different about GCC budgeting</h2>
+  <ul class="reveal">
     <li><strong>Rent is often paid in one to four cheques a year</strong>, not monthly — which means it doesn't show up as a monthly expense unless you deliberately divide it and set the portion aside each month.</li>
     <li><strong>No income tax</strong> on salary in the UAE and most of the GCC, so take-home pay is closer to gross than expats from most other countries are used to — easy to mistake for more disposable income than it is once savings and remittances are accounted for.</li>
     <li><strong>Remittances are often a fixed, recurring commitment</strong>, not a leftover you send when there's extra — worth budgeting for up front, the same way you'd budget for rent.</li>
     <li><strong>School fees, if you have children,</strong> are typically a large annual or termly cost, similar to rent in how it should be divided monthly for budgeting purposes.</li>
   </ul>
 
-  <h2>A starting split</h2>
-  <p>This isn't a rigid formula — it's a starting point to adjust to your actual numbers:</p>
-  <table>
+  <h2 class="reveal">A starting split</h2>
+  <p class="reveal">This isn't a rigid formula — it's a starting point to adjust to your actual numbers:</p>
+  <table class="reveal">
     <thead><tr><th>Category</th><th>Suggested share</th><th>Notes</th></tr></thead>
     <tbody>
       <tr><td>Rent &amp; fixed bills</td><td>~35-40%</td><td>Divide annual/quarterly rent cheques into a monthly amount, don't budget only for the months a cheque is due</td></tr>
@@ -80,15 +80,15 @@
     </tbody>
   </table>
 
-  <h2>Set these up before your first full month</h2>
-  <ol>
+  <h2 class="reveal">Set these up before your first full month</h2>
+  <ol class="reveal">
     <li>An account (or sub-budget) for the portion of annual rent you're setting aside monthly.</li>
     <li>A dedicated remittance category, logged in the currency you actually send in.</li>
     <li>A separate savings category — don't let it get absorbed into "leftover money," which tends to be zero.</li>
     <li>If Zakat applies to you, a note of when your zakat year starts, so you're not calculating it from scratch every time.</li>
   </ol>
 
-  <div class="callout accent">
+  <div class="callout accent reveal">
     <p>
       Budget Tracker is built around exactly this shape of budgeting — multi-currency accounts, a dedicated
       remittance log, per-category budgets, and a built-in Zakat calculator — rather than a generic template you
@@ -107,5 +107,23 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>
