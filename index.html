@@ -10,7 +10,9 @@
 <meta property="og:description" content="Multi-currency budgeting, a built-in Zakat calculator, and remittance tracking — offline, encrypted, and ad-free.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mohammedajmal-tech.github.io/budget-tracker-site/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://mohammedajmal-tech.github.io/budget-tracker-site/assets/home-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mohammedajmal-tech.github.io/budget-tracker-site/assets/home-hero.jpg">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -77,7 +79,7 @@
 </head>
 <body>
 
-<div class="topnav">
+<div class="apple-nav">
   <a class="brand" href="index.html">
     <span class="brand-mark"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
     <span class="brand-name">Budget Tracker</span>
@@ -89,68 +91,130 @@
   </div>
 </div>
 
-<div class="wrap">
-
+<section class="hero-apple">
   <p class="eyebrow">For expats in the UAE &amp; GCC</p>
   <h1>The money tracker built for people earning in one currency and living in another</h1>
   <p class="lede">
-    Budget Tracker handles multi-currency accounts, a real Zakat calculator, and remittance tracking out of the box —
-    the things a generic budgeting app leaves you to work around. Everything stays encrypted on your device. No bank
-    linking, no ads, no subscription.
+    Multi-currency accounts, a real Zakat calculator, and remittance tracking — out of the box. Everything stays
+    encrypted on your device. No bank linking, no ads, no subscription.
   </p>
-
   <div class="cta-row">
     <a class="btn btn-primary" href="mailto:bramoralabsupport@gmail.com?subject=Notify%20me%20when%20Budget%20Tracker%20launches">Get notified at launch</a>
     <a class="btn btn-secondary" href="guides/index.html">Read the guides</a>
   </div>
   <p class="btn-note">Currently in closed testing on Google Play — public launch coming soon.</p>
 
-  <h2>Built around three problems generic budgeting apps ignore</h2>
-  <div class="grid">
-    <div class="feature-card">
-      <div class="ftitle">Multi-currency, done properly</div>
-      <div class="fdesc">140+ currencies, with AED, SAR, QAR, KWD, BHD and OMR pinned. Track what you actually spent in the currency you spent it in.</div>
+  <div class="hero-shot reveal">
+    <img src="assets/home-hero.jpg" alt="Budget Tracker home screen showing monthly spending, quick add expense, and spending trend chart" width="900" height="1325" loading="eager">
+  </div>
+</section>
+
+<section class="section">
+  <div class="feature-block reveal">
+    <div class="fb-text">
+      <div class="fb-tag">At a glance</div>
+      <h3>Your whole month, summarized</h3>
+      <p>
+        One home screen shows what you've spent, what's left of your budget, and where it's trending — no digging
+        through tabs to find out where your money went.
+      </p>
     </div>
-    <div class="feature-card">
-      <div class="ftitle">A real Zakat calculator</div>
-      <div class="fdesc">Cash, gold, silver, investments and debts, checked against the gold or silver nisab — built into the same app as your budget, not a separate download.</div>
-    </div>
-    <div class="feature-card">
-      <div class="ftitle">Remittance tracking</div>
-      <div class="fdesc">Log money sent home as its own category, so it shows up in your budget instead of vanishing into "miscellaneous."</div>
-    </div>
-    <div class="feature-card">
-      <div class="ftitle">Private by default</div>
-      <div class="fdesc">Your data lives in an encrypted (SQLCipher) database on your phone. No bank linking, no account required, no data leaves the device unless you export it yourself.</div>
-    </div>
-    <div class="feature-card">
-      <div class="ftitle">No ads, ever</div>
-      <div class="fdesc">No ad SDK anywhere in the app. Nothing to sit through, nothing tracking you for ad targeting.</div>
-    </div>
-    <div class="feature-card">
-      <div class="ftitle">Pay once, not monthly</div>
-      <div class="fdesc">The core app is free. CSV/Excel export and PDF reports unlock with a single one-time purchase — not a subscription.</div>
+    <div class="fb-media">
+      <img src="assets/dashboard.jpg" alt="Budget Tracker dashboard showing AED 1,200 spent this month, remaining budget, and a spending trend chart" width="900" height="1608" loading="lazy">
     </div>
   </div>
 
-  <h2>Frequently asked</h2>
-  <div class="faq-item">
-    <p class="q">Is Budget Tracker free?</p>
-    <p class="a">Yes. Every core feature — accounts, transactions, budgets, the Zakat calculator, remittance tracking, multi-currency support — is free. A single one-time purchase unlocks CSV/Excel export and PDF reports.</p>
-  </div>
-  <div class="faq-item">
-    <p class="q">Does it work offline?</p>
-    <p class="a">Yes. Everything is stored in an encrypted database on your device. No internet connection or bank linking required, and your financial data never leaves your phone unless you export it.</p>
-  </div>
-  <div class="faq-item">
-    <p class="q">Does it have ads?</p>
-    <p class="a">No ads anywhere, and no ad SDK in the build.</p>
-  </div>
-  <div class="faq-item">
-    <p class="q">Who makes it?</p>
-    <p class="a">Budget Tracker is built by Bramora Labs, an independent, one-person team based in the UAE. See the <a href="about.html">About page</a> for the full story.</p>
+  <div class="feature-block reverse reveal">
+    <div class="fb-text">
+      <div class="fb-tag">Only in Budget Tracker</div>
+      <h3>Calculate your Zakat in seconds</h3>
+      <p>
+        Cash, gold, silver, investments, and money owed to you, minus debts — checked against the gold or silver
+        nisab at 2.5%. No separate app, no spreadsheet. See our <a href="guides/how-to-calculate-zakat-on-savings.html">full Zakat guide</a>.
+      </p>
+    </div>
+    <div class="fb-media">
+      <img src="assets/zakat.jpg" alt="Budget Tracker Zakat calculator showing net zakatable wealth, nisab threshold, and zakat due" width="900" height="1608" loading="lazy">
+    </div>
   </div>
 
+  <div class="feature-block reveal">
+    <div class="fb-text">
+      <div class="fb-tag">Multi-currency</div>
+      <h3>Every GCC currency, built right in</h3>
+      <p>
+        140+ currencies, with AED, SAR, QAR, KWD, BHD and OMR pinned to the top. Log what you actually spent in the
+        currency you spent it in — no forced conversion, no guessing.
+      </p>
+    </div>
+    <div class="fb-media">
+      <img src="assets/currency.jpg" alt="Budget Tracker currency picker showing AED, SAR, QAR, KWD, BHD, OMR and 140+ other currencies" width="900" height="1608" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-head">
+    <p class="eyebrow">Why it's different</p>
+    <h2>Private by design, not by promise</h2>
+    <p>No bank linking, no ads, no subscription — because the app was built without needing any of them.</p>
+  </div>
+  <div class="chip-grid">
+    <div class="chip reveal">
+      <div class="chip-icon">🔒</div>
+      <h4>Encrypted on-device</h4>
+      <p>Everything lives in a SQLCipher-encrypted database on your phone. Nothing syncs anywhere unless you export it yourself.</p>
+    </div>
+    <div class="chip reveal">
+      <div class="chip-icon">🚫</div>
+      <h4>No ads, ever</h4>
+      <p>No ad SDK anywhere in the app — nothing to sit through, nothing tracking you for ad targeting.</p>
+    </div>
+    <div class="chip reveal">
+      <div class="chip-icon">💳</div>
+      <h4>Pay once, not monthly</h4>
+      <p>The core app is free. CSV/Excel export and PDF reports unlock with a single one-time purchase.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">FAQ</p>
+    <h2>Frequently asked</h2>
+  </div>
+  <div class="apple-faq">
+    <div class="faq-item reveal">
+      <p class="q">Is Budget Tracker free?</p>
+      <p class="a">Yes. Every core feature — accounts, transactions, budgets, the Zakat calculator, remittance tracking, multi-currency support — is free. A single one-time purchase unlocks CSV/Excel export and PDF reports.</p>
+    </div>
+    <div class="faq-item reveal">
+      <p class="q">Does it work offline?</p>
+      <p class="a">Yes. Everything is stored in an encrypted database on your device. No internet connection or bank linking required, and your financial data never leaves your phone unless you export it.</p>
+    </div>
+    <div class="faq-item reveal">
+      <p class="q">Does it have ads?</p>
+      <p class="a">No ads anywhere, and no ad SDK in the build.</p>
+    </div>
+    <div class="faq-item reveal">
+      <p class="q">Who makes it?</p>
+      <p class="a">Budget Tracker is built by Bramora Labs, an independent, one-person team based in the UAE. See the <a href="about.html">About page</a> for the full story.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-band reveal">
+    <h2>Built for expat life, not adapted to it</h2>
+    <p>Be the first to know when Budget Tracker launches on Google Play.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:bramoralabsupport@gmail.com?subject=Notify%20me%20when%20Budget%20Tracker%20launches">Get notified at launch</a>
+    </div>
+    <p class="btn-note">Currently in closed testing on Google Play.</p>
+  </div>
+</section>
+
+<div class="wrap">
   <footer class="site-footer">
     <div class="foot-links">
       <a href="guides/index.html">Guides</a>
@@ -160,7 +224,25 @@
     </div>
     Operated by Bramora Labs · Questions? <a href="mailto:bramoralabsupport@gmail.com">bramoralabsupport@gmail.com</a>
   </footer>
-
 </div>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

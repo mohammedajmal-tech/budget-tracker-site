@@ -372,3 +372,199 @@ th {
   font-size: 0.9rem;
 }
 .back-link:hover { color: var(--accent); }
+
+/* =====================================================================
+   Apple-style homepage — full-bleed sections, big type, product shots
+   ===================================================================== */
+
+.apple-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(16px) saturate(1.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+.apple-nav .brand { margin: 0; }
+.apple-nav .brand-name { font-size: 1rem; }
+.apple-nav .topnav-links { display: flex; gap: 26px; }
+.apple-nav .topnav-links a { font-size: 0.88rem; }
+
+.hero-apple {
+  text-align: center;
+  padding: 96px 24px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero-apple .eyebrow { justify-content: center; display: flex; }
+.hero-apple h1 {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px;
+}
+.hero-apple .lede {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  max-width: 42ch;
+  margin: 0 auto 36px;
+  color: var(--muted);
+}
+.hero-apple .cta-row { justify-content: center; }
+
+.hero-shot {
+  margin: 64px auto 0;
+  max-width: 460px;
+  padding: 0 24px;
+}
+.hero-shot img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 40px 80px -30px rgba(6, 38, 17, 0.45);
+}
+
+.section {
+  padding: 100px 24px;
+}
+.section-alt { background: var(--surface); }
+
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+.section-head .eyebrow { justify-content: center; display: flex; }
+.section-head h2 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin: 0;
+}
+.section-head p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 14px 0 0;
+}
+
+.feature-block {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.feature-block + .feature-block { margin-top: 120px; }
+.feature-block.reverse { flex-direction: row-reverse; }
+.feature-block .fb-text { flex: 1; min-width: 0; }
+.feature-block .fb-media { flex: 1; min-width: 0; }
+.feature-block .fb-media img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -24px rgba(6, 38, 17, 0.4);
+}
+.feature-block .fb-tag {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.feature-block h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+.feature-block p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .feature-block, .feature-block.reverse {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .feature-block .fb-media { max-width: 380px; margin: 0 auto; }
+  .feature-block .fb-text { text-align: center; }
+}
+
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .chip-grid { grid-template-columns: 1fr; }
+}
+.chip {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+}
+.chip .chip-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 1.3rem;
+}
+.chip h4 { font-size: 1.05rem; font-weight: 650; margin: 0 0 8px; }
+.chip p { color: var(--muted); font-size: 0.92rem; margin: 0; line-height: 1.55; }
+
+.cta-band {
+  text-align: center;
+  padding: 110px 24px;
+  background: linear-gradient(160deg, var(--accent-ink), #0e1512 65%);
+  color: #eaf3ee;
+  border-radius: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cta-band h2 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: #fff;
+}
+.cta-band p { color: #a9bdb2; max-width: 44ch; margin: 0 auto 32px; font-size: 1.05rem; }
+.cta-band .cta-row { justify-content: center; }
+.cta-band .btn-note { color: #7f9488; }
+
+.apple-faq {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
