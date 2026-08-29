@@ -1,5 +1,5 @@
 (function () {
-  var forms = document.querySelectorAll('.signup-form');
+  var forms = document.querySelectorAll('.signup-form-wrap');
   forms.forEach(function (form) {
     var status = form.parentElement.querySelector('.form-status');
     form.addEventListener('submit', function (e) {

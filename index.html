@@ -100,13 +100,25 @@
     Multi-currency accounts, a real Zakat calculator, and remittance tracking — out of the box. Everything stays
     encrypted on your device. No bank linking, no ads, no subscription.
   </p>
-  <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
+  <form class="signup-form-wrap" action="https://api.web3forms.com/submit" method="POST">
     <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
     <input type="hidden" name="access_key" value="35cb142e-9d52-4e2e-960e-e53f9bc0456f">
     <input type="hidden" name="subject" value="New Budget Tracker launch signup">
     <input type="hidden" name="from_name" value="Budget Tracker website">
-    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-    <button type="submit" class="btn btn-primary">Get notified</button>
+    <div class="signup-form">
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Get notified</button>
+    </div>
+    <div class="consent-row">
+      <label>
+        <input type="checkbox" name="consent" value="yes" required>
+        I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.
+      </label>
+      <label>
+        <input type="checkbox" name="promo_consent" value="yes">
+        Send me occasional updates and offers about Budget Tracker.
+      </label>
+    </div>
   </form>
   <p class="form-status" aria-live="polite"></p>
   <p class="btn-note">Coming soon to Google Play &middot; <a href="guides/index.html">Read the guides</a></p>
@@ -262,13 +274,25 @@
   <div class="cta-band reveal">
     <h2>Built for expat life, not adapted to it</h2>
     <p>Be the first to know when Budget Tracker launches on Google Play.</p>
-    <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
+    <form class="signup-form-wrap" action="https://api.web3forms.com/submit" method="POST">
       <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
       <input type="hidden" name="access_key" value="35cb142e-9d52-4e2e-960e-e53f9bc0456f">
       <input type="hidden" name="subject" value="New Budget Tracker launch signup">
       <input type="hidden" name="from_name" value="Budget Tracker website">
-      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-      <button type="submit" class="btn btn-primary">Get notified</button>
+      <div class="signup-form">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Get notified</button>
+      </div>
+      <div class="consent-row">
+        <label>
+          <input type="checkbox" name="consent" value="yes" required>
+          I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.
+        </label>
+        <label>
+          <input type="checkbox" name="promo_consent" value="yes">
+          Send me occasional updates and offers about Budget Tracker.
+        </label>
+      </div>
     </form>
     <p class="form-status" aria-live="polite"></p>
     <p class="btn-note">Coming soon to Google Play.</p>

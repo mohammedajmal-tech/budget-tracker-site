@@ -212,6 +212,34 @@ h1 {
 .cta-band .signup-form input[type="email"] { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: #eaf3ee; }
 .cta-band .form-status.success { color: var(--accent-soft); }
 
+.consent-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 2px 0 12px;
+  max-width: 460px;
+}
+.consent-row label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+  cursor: pointer;
+}
+.consent-row input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.consent-row a { color: inherit; text-decoration: underline; }
+.cta-band .consent-row { margin-left: auto; margin-right: auto; text-align: left; }
+.cta-band .consent-row label { color: #a9bdb2; }
+
 /* ---------- Section headings ---------- */
 
 h2 {
