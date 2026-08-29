@@ -1,7 +1,39 @@
 (function () {
+  var STORAGE_KEY = 'btSignupDone';
+
+  function hasAlreadySignedUp() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function rememberSignedUp() {
+    try {
+      localStorage.setItem(STORAGE_KEY, '1');
+    } catch (e) {
+      // localStorage unavailable (private mode, blocked, etc.) — not critical, just skip remembering
+    }
+  }
+
+  function showAlreadySubmitted(form, status) {
+    form.style.display = 'none';
+    if (status) {
+      status.textContent = "You're already on the list — we'll email you the moment Budget Tracker launches.";
+      status.className = 'form-status success';
+    }
+  }
+
   var forms = document.querySelectorAll('.signup-form-wrap');
   forms.forEach(function (form) {
     var status = form.parentElement.querySelector('.form-status');
+
+    if (hasAlreadySignedUp()) {
+      showAlreadySubmitted(form, status);
+      return;
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var button = form.querySelector('button');
@@ -23,6 +55,7 @@
         .then(function (res) { return res.json(); })
         .then(function (data) {
           if (data.success) {
+            rememberSignedUp();
             form.reset();
             form.style.display = 'none';
             if (status) {
