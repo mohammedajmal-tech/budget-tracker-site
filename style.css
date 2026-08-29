@@ -170,6 +170,48 @@ h1 {
   margin: 0 0 8px;
 }
 
+/* ---------- Signup form (native, no external redirect) ---------- */
+
+.signup-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.signup-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+.signup-form input[type="email"]::placeholder { color: var(--faint); }
+.signup-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.signup-form .hp-field { display: none; }
+.signup-form button {
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.signup-form button:disabled { opacity: 0.6; cursor: default; }
+.form-status {
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+  min-height: 1.2em;
+}
+.form-status.success { color: var(--accent); }
+.form-status.error { color: #e06a5f; }
+.cta-band .signup-form { justify-content: center; }
+.cta-band .signup-form input[type="email"] { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: #eaf3ee; }
+.cta-band .form-status.success { color: var(--accent-soft); }
+
 /* ---------- Section headings ---------- */
 
 h2 {
