@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Best Budgeting Apps for GCC Expats in 2026 (And What to Actually Look For)</title>
 <meta name="description" content="What actually matters when choosing a budgeting app as a GCC expat — multi-currency support, bank linking, offline privacy, and pricing — plus how the options compare.">
 <link rel="canonical" href="https://mohammedajmal-tech.github.io/budget-tracker-site/guides/best-budgeting-apps-gcc-expats.html">
@@ -118,23 +120,6 @@
   </footer>
 
 </div>
-<script>
-(function () {
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    els.forEach(function (el) { el.classList.add('visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  els.forEach(function (el) { io.observe(el); });
-})();
-</script>
+<script src="../reveal.js" defer></script>
 </body>
 </html>

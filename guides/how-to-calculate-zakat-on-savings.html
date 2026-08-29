@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>How to Calculate Zakat on Savings and Salary (GCC Guide)</title>
 <meta name="description" content="A step-by-step method for calculating Zakat on cash, gold, silver, investments and salary savings — nisab thresholds, the 2.5% rate, and a worked AED example.">
 <link rel="canonical" href="https://mohammedajmal-tech.github.io/budget-tracker-site/guides/how-to-calculate-zakat-on-savings.html">
@@ -161,15 +163,15 @@
     <p class="q">What percentage is Zakat on savings?</p>
     <p class="a">2.5% (one fortieth) of net zakatable wealth, once it's at or above nisab and held for a lunar year.</p>
   </div>
-  <div class="faq-item reveal" style="transition-delay: 0.06s">
+  <div class="faq-item reveal delay-1">
     <p class="q">What is nisab?</p>
     <p class="a">The minimum wealth threshold before Zakat applies — commonly the value of ~85g of gold or ~595g of silver at current prices (figures vary slightly by scholar).</p>
   </div>
-  <div class="faq-item reveal" style="transition-delay: 0.12s">
+  <div class="faq-item reveal delay-2">
     <p class="q">Gold or silver nisab — which should I use?</p>
     <p class="a">Both are valid; it's a choice between you and your scholar. The silver nisab is lower, so many scholars recommend it — more people end up qualifying to give.</p>
   </div>
-  <div class="faq-item reveal" style="transition-delay: 0.18s">
+  <div class="faq-item reveal delay-3">
     <p class="q">Do I pay Zakat directly on my salary?</p>
     <p class="a">No — Zakat applies to wealth you hold and retain above nisab for a lunar year, not to income the moment it's earned.</p>
   </div>
@@ -193,23 +195,6 @@
   </footer>
 
 </div>
-<script>
-(function () {
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    els.forEach(function (el) { el.classList.add('visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  els.forEach(function (el) { io.observe(el); });
-})();
-</script>
+<script src="../reveal.js" defer></script>
 </body>
 </html>

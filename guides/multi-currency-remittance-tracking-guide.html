@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>How to Track Money You Send Home Without Losing It in "Miscellaneous"</title>
 <meta name="description" content="A simple system for tracking remittances as their own budget category, so money sent home shows up in your budget instead of disappearing into miscellaneous.">
 <link rel="canonical" href="https://mohammedajmal-tech.github.io/budget-tracker-site/guides/multi-currency-remittance-tracking-guide.html">
@@ -118,23 +120,6 @@
   </footer>
 
 </div>
-<script>
-(function () {
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    els.forEach(function (el) { el.classList.add('visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  els.forEach(function (el) { io.observe(el); });
-})();
-</script>
+<script src="../reveal.js" defer></script>
 </body>
 </html>
