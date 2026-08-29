@@ -194,7 +194,7 @@ h1 {
   outline: none;
   border-color: var(--accent);
 }
-.signup-form .hp-field { display: none; }
+.signup-form-wrap .hp-field { display: none; }
 .signup-form button {
   font: inherit;
   cursor: pointer;
