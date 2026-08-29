@@ -47,10 +47,19 @@
         status.className = 'form-status';
       }
 
+      var formData = new FormData(form);
+      // Explicitly record both consent choices as clear Yes/No — never omitted, never ambiguous.
+      var privacyTermsBox = form.querySelector('input[name="privacy_terms_agreement"]');
+      var promoBox = form.querySelector('input[name="promotional_email_optin"]');
+      formData.set('privacy_terms_agreement', privacyTermsBox && privacyTermsBox.checked ? 'Yes' : 'No');
+      formData.set('promotional_email_optin', promoBox && promoBox.checked ? 'Yes' : 'No');
+      // Client-reported submission time (browser clock, not server-verified — see Privacy Policy).
+      formData.set('submitted_at_client', new Date().toISOString());
+
       fetch(form.action, {
         method: 'POST',
         headers: { Accept: 'application/json' },
-        body: new FormData(form)
+        body: formData
       })
         .then(function (res) { return res.json(); })
         .then(function (data) {
