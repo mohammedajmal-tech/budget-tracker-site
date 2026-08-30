@@ -21,5 +21,9 @@ Key facts:
 - [Best Budgeting Apps for GCC Expats in 2026](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/best-budgeting-apps-gcc-expats.html): comparison of budgeting apps against expat-specific criteria
 - [How to Track Money You Send Home](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/multi-currency-remittance-tracking-guide.html): remittance tracking method
 - [AED Budgeting 101](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/aed-budgeting-101-gcc-expats.html): starting budget split for GCC expats
+- [How Much Should You Save From Your Salary in the UAE/GCC?](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/how-much-to-save-salary-uae-gcc.html): savings-rate guide adapted for tax-free pay and remittances
+- [Budgeting on a Dubai Salary](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/budgeting-on-a-dubai-salary.html): worked budget breakdown example
+- [How to Track Expenses Without Linking Your Bank Account](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/track-expenses-without-bank-linking.html): what bank-linking grants access to, and how to track spending without it
+- [Offline Expense Tracking: How It Works and Why It Matters](https://mohammedajmal-tech.github.io/budget-tracker-site/guides/offline-expense-tracker-no-internet.html): what "offline" actually means for a budgeting app
 - [Privacy Policy](https://mohammedajmal-tech.github.io/budget-tracker-legal/privacy.html)
 - [Terms](https://mohammedajmal-tech.github.io/budget-tracker-legal/terms.html)

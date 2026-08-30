@@ -35,4 +35,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mohammedajmal-tech.github.io/budget-tracker-site/guides/how-much-to-save-salary-uae-gcc.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammedajmal-tech.github.io/budget-tracker-site/guides/budgeting-on-a-dubai-salary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammedajmal-tech.github.io/budget-tracker-site/guides/track-expenses-without-bank-linking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammedajmal-tech.github.io/budget-tracker-site/guides/offline-expense-tracker-no-internet.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
